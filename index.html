@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Cyber Sentinel Network Monitor</title>
+<style>
+  :root { --bg:#ffffff; --fg:#1C1B1F; --muted:#5f5b66; --accent:#00897B; --rule:#e4e1e8; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#1C1B1F; --fg:#E6E1E5; --muted:#9E9BA6; --accent:#03DAC6; --rule:#3B3A45; } }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:720px; margin:0 auto; padding:40px 16px 64px; }
+  h1 { font-size:1.7rem; line-height:1.25; margin:0 0 8px; }
+  h2 { font-size:1.15rem; margin:32px 0 8px; padding-top:16px; border-top:1px solid var(--rule); }
+  a { color:var(--accent); overflow-wrap:anywhere; }
+  li { margin:4px 0; }
+</style>
+</head>
+<body>
+<main>
+<h1 id="privacy-policy-cyber-sentinel-network-monitor">Privacy Policy:
+Cyber Sentinel Network Monitor</h1>
+<p>Last updated: 26 October 2026</p>
+<p>Cyber Sentinel Network Monitor ("the app") is a network monitoring
+tool developed by Nikiforos Manolas as part of a diploma thesis at the
+University of Western Macedonia. This policy explains what the app does
+with data.</p>
+<h2 id="summary">Summary</h2>
+<p>The app does not collect, store or share personal data with the
+developer or anyone else. It has no account, no advertising and no
+analytics.</p>
+<h2 id="network-traffic-capture-process-sniffer">Network traffic capture
+(Process Sniffer)</h2>
+<p>When you start a capture, the app uses Android's VpnService to create
+a local VPN on your device. Traffic of the app you choose (or of all
+apps, except Cyber Sentinel itself) passes through this local VPN so
+that the app can show you its metadata: IP addresses, ports, protocol,
+packet sizes, and hostnames taken from DNS answers and from the
+unencrypted Server Name Indication (SNI) field of TLS connections.</p>
+<ul>
+<li>The traffic is forwarded unchanged to its original destination. It
+is not sent to any server operated by the developer, and no external VPN
+server is involved.</li>
+<li>Encrypted content (for example HTTPS pages) is never decrypted.</li>
+<li>Captured information is kept only in the device's memory, is never
+written to storage, and is discarded when the app is closed.</li>
+<li>While a capture is running, DNS queries of the monitored apps are
+sent to Google Public DNS (8.8.8.8), whose privacy policy is at <a
+href="https://developers.google.com/speed/public-dns/privacy">https://developers.google.com/speed/public-dns/privacy</a>.</li>
+</ul>
+<p>The capture starts only after you approve Android's VPN connection
+request, and a persistent notification is shown while it runs. You can
+stop it at any time from the app or the notification.</p>
+<h2 id="api-playground">API Playground</h2>
+<p>The API Playground sends test requests to the public test service
+JSONPlaceholder (<a
+href="https://jsonplaceholder.typicode.com">https://jsonplaceholder.typicode.com</a>).
+These requests contain only fixed sample data from the app, never your
+personal data. The results are kept in memory and discarded when the app
+is closed.</p>
+<h2 id="permissions">Permissions</h2>
+<ul>
+<li><strong>Internet:</strong> to send test requests and to forward
+captured traffic.</li>
+<li><strong>VPN service (BIND_VPN_SERVICE):</strong> to capture traffic
+locally, as described above.</li>
+<li><strong>Foreground service and notifications:</strong> to keep the
+capture running and show its status.</li>
+<li><strong>Query installed apps:</strong> to list launchable apps so
+you can choose which one to monitor. This list stays on the device.</li>
+</ul>
+<h2 id="children">Children</h2>
+<p>The app is not directed at children under 13.</p>
+<h2 id="changes">Changes</h2>
+<p>Changes to this policy will be published at this address with a new
+"Last updated" date.</p>
+<h2 id="contact">Contact</h2>
+<p>For questions about this policy, contact: <a
+href="mailto:forismanos@gmail.com">forismanos@gmail.com</a></p>
+
+</main>
+</body>
+</html>
